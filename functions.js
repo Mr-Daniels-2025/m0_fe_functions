@@ -1,13 +1,37 @@
 // 1: Write a function named printGreeting that prints a simple greeting message, the same one, every time it is called. Call this function 3 times.
-
+function printGreeting() {
+  console.log("Hello!");
+}
+printGreeting();
+printGreeting();
+printGreeting();
 
 // 2: Write a function that accepts 1 argument. The function should console.log a sentence that interpolates the data passed in.
-
+function getLocation(location) {
+  console.log(location);
+}
+getLocation("Colorado");
 
 // 3: Write a function that has 3 parameters: a string and two numbers. The String will be the name of a company, and the numbers will represent the minimum and maximum of a pay range for a posted job. The function should print out a sentence that includes the name of the company and the range itself (if the numbers passed in are 90000 and 110000, the pay range is 20000).
+function jobListing(company, maxSalary, minSalary) {
 
+  var range = maxSalary - minSalary;
+  console.log('${company} pay range is ${range}.');
+}
+jobListing("dan", 1001000,10000);
 
 // 4: Write a function that satifies the following interaction pattern:
+function checkStock(numItems, item) {
+  if (numItems > 3) {
+    console.log(`${item} - stocked`)
+  }
+  else if (numItems > 0) {
+    console.log(`${item} - running LOW`)
+  }
+  else {
+    console.log(`${item} - OUT of stock!`)
+  }
+}
 
 checkStock(4, "Coffee");
 // => "Coffee is stocked"
